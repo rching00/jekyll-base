@@ -15,9 +15,35 @@
         <script type="text/javascript" src="//dl.frontapp.com/libs/plugin-sdk-1.0.1.min.js"></script>
     </head>
       <body>
-        <script type="text/javascript">
+        <button id="assign">Assign to me</button>
+          <script type="text/javascript">
           // window.Front is now available.
-        </script>
+          const assignButton = document.getElementById('assign');
+
+          Front.contextUpdates.subscribe(context => {
+            assignButton.removeEventListener('click',_assign);
+            switch(context.type) {
+              case 'noConversation':
+                console.log('No conversation selected');
+                break;
+
+              case 'singleConversation':
+                console.log('Selected conversation:', context.conversation);
+                assignButton.addEventListener('click', function _assign()){
+                  Front.assign(context.teammate.id)
+                });
+                break;
+
+              case 'multiConversations':
+                console.log('Multiple conversations selected', context.conversations);
+                break;
+
+              default:
+                console.error(`Unsupported context type: ${context.type}`);
+                break;
+              }
+            });
+          </script>
       </body>
 
     <div class="page-content">
