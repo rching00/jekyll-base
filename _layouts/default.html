@@ -21,7 +21,7 @@
           const assignButton = document.getElementById('assign');
 
           Front.contextUpdates.subscribe(context => {
-            assignButton.removeEventListener('click',_assign);
+            //assignButton.removeEventListener('click',_assign);
             switch(context.type) {
               case 'noConversation':
                 console.log('No conversation selected');
