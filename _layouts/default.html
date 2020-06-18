@@ -10,11 +10,6 @@
     <script>
       window.FrontChat('init', {chatId: '0fc7e3228dbc875e4e1fb2367c367c7f', useDefaultLauncher: true});
     </script>
-
-    <head>
-        <script type="text/javascript" src="//dl.frontapp.com/libs/plugin-sdk-1.0.1.min.js"></script>
-    </head>
-      <body>
         <button id="assign">Assign to me</button>
           <script type="text/javascript">
           // window.Front is now available.
@@ -22,6 +17,7 @@
 
           Front.contextUpdates.subscribe(context => {
             //assignButton.removeEventListener('click',_assign);
+            //Try adding code into eventListener
             switch(context.type) {
               case 'noConversation':
                 console.log('No conversation selected');
@@ -44,7 +40,6 @@
               }
             });
           </script>
-      </body>
 
     <div class="page-content">
       <div class="wrapper">
