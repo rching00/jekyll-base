@@ -11,12 +11,9 @@
       window.FrontChat('init', {chatId: '0fc7e3228dbc875e4e1fb2367c367c7f', useDefaultLauncher: true});
     </script>
         <button id="assign">Assign to me</button>
-        <button id="tag">Add Tag</button>
           <script type="text/javascript">
           // window.Front is now available.
           const assignButton = document.getElementById('assign');
-          const tagButton = document.getElementById('tag');
-          const tagArray=[61371341]
 
           Front.contextUpdates.subscribe(context => {
             //assignButton.removeEventListener('click',_assign);
@@ -30,9 +27,6 @@
                 console.log('Selected conversation:', context.conversation);
                 assignButton.addEventListener('click', function _assign(){
                   Front.assign(context.teammate.id)
-                });
-                tagButton.addEventListener('click',function _tag(){
-                  Front.tag(tagArray)
                 });
                 break;
 
