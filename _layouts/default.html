@@ -11,9 +11,11 @@
       window.FrontChat('init', {chatId: '0fc7e3228dbc875e4e1fb2367c367c7f', useDefaultLauncher: true});
     </script>
         <button id="assign">Assign to me</button>
+        <button id="tag">Add Tag</button>
           <script type="text/javascript">
           // window.Front is now available.
           const assignButton = document.getElementById('assign');
+          const tagButton = document.getElementById('tag');
 
           Front.contextUpdates.subscribe(context => {
             //assignButton.removeEventListener('click',_assign);
@@ -28,6 +30,9 @@
                 assignButton.addEventListener('click', function _assign(){
                   Front.assign(context.teammate.id)
                 });
+                tagButton.addEventListener('click',function _tag()){
+                  Front.tag(60751629)
+                });
                 break;
 
               case 'multiConversations':
@@ -39,7 +44,7 @@
                 break;
               }
             });
-          </script>
+    </script>
 
     <div class="page-content">
       <div class="wrapper">
