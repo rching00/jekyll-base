@@ -16,6 +16,7 @@
           // window.Front is now available.
           const assignButton = document.getElementById('assign');
           const tagButton = document.getElementById('tag');
+          const tagArray=[61371341]
 
           Front.contextUpdates.subscribe(context => {
             //assignButton.removeEventListener('click',_assign);
@@ -31,7 +32,7 @@
                   Front.assign(context.teammate.id)
                 });
                 tagButton.addEventListener('click',function _tag(){
-                  Front.tag(61371341)
+                  Front.tag(tagArray)
                 });
                 break;
 
