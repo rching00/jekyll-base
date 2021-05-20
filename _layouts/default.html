@@ -4,6 +4,37 @@
   {% include head.html %}
 
   <body>
+    <form
+      method="POST"
+      name="fa-form-1"
+      action="https://webhook.frontapp.com/forms/cloud_consulting/XBYByqJcDXoVgYu2c2H16MxSCJST6nPt1sganSSGl4McFD2LvGG4sGU2kQf1MEicpJmrL1NLPllLhghgRu48AVuq0lvyZRc852kVHygbxQKixk-triX6"
+      enctype="multipart/form-data"
+      accept-charset="utf-8"
+    >
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email">
+      </div>
+
+      <div>
+        <textarea name="body"></textarea>
+      </div>
+
+      <div>
+        <input type="file" name="attachment">
+      </div>
+
+       <div id="html_element"></div>
+      <div>
+        <input type="submit" value="Send">
+      </div>
+    </form>
+
     {% include header.html %}
     <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
     <script>
