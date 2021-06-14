@@ -66,17 +66,16 @@
               }
             });
     </script>
-
+    <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+    <script>
+      window.FrontChat('init', {chatId: '85da35725c3e63deecc797a73adeddba', useDefaultLauncher: true});
+    </script>
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
       </div>
     </div>
     {% include footer.html %}
-    <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
-    <script>
-      window.FrontChat('init', {chatId: '85da35725c3e63deecc797a73adeddba', useDefaultLauncher: true});
-    </script>
   </body>
 
 </html>
