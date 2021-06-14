@@ -36,11 +36,6 @@
     </form>
 
     {% include header.html %}
-    <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
-    <script>
-      window.FrontChat('init', {chatId: '85da35725c3e63deecc797a73adeddba', useDefaultLauncher: true});
-    </script>
-
         <button id="assign">Assign to me</button>
           <script type="text/javascript">
           // window.Front is now available.
@@ -78,7 +73,10 @@
       </div>
     </div>
     {% include footer.html %}
-
+    <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+    <script>
+      window.FrontChat('init', {chatId: '85da35725c3e63deecc797a73adeddba', useDefaultLauncher: true});
+    </script>
   </body>
 
 </html>
