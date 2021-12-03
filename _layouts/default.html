@@ -27,8 +27,8 @@
                 console.log('Selected conversation:', context.conversation);
                 assignButton.addEventListener('click', function _assign(){
                   Front.assign(context.teammate.id)
-                  Front.listMessages()
                 });
+                console.log(Front.listMessages())
                 break;
 
               case 'multiConversations':
